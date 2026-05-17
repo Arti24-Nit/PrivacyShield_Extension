@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Guardian Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Vertical Sidebar Navigation -->
+    <nav class="side-nav">
+      <div class="nav-top">
+        <div class="logo">
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="shield-logo"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        </div>
+        <div class="nav-links">
+          <a href="#" class="nav-item active" data-tab="dashboard" title="Dashboard">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          </a>
+          <a href="#" class="nav-item" data-tab="activity" title="Activity">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+          </a>
+          <a href="#" class="nav-item" data-tab="sites" title="Sites">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+          </a>
+          <a href="#" class="nav-item" data-tab="insights" title="Insights">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9.663 17h4.674"></path><path d="M10 20h4"></path><path d="M12 2v1"></path><path d="M4.929 4.929l.707.707"></path><path d="M12 17v1"></path><path d="M19.071 4.929l-.707.707"></path><path d="M20 12h1"></path><path d="M18.364 18.364l-.707-.707"></path><path d="M3 12h1"></path><path d="M5.636 18.364l.707-.707"></path><path d="M12 13a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"></path></svg>
+          </a>
+          <a href="#" class="nav-item" data-tab="settings" title="Settings">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          </a>
+        </div>
+      </div>
+      <div class="nav-bottom">
+        <a href="#" class="nav-item">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <header class="top-header">
+        <div class="brand">
+          <span class="brand-text">PRIVACY <span class="brand-accent">GUARDIAN</span></span>
+        </div>
+        <div class="active-tab-indicator" id="activeTabName">DASHBOARD</div>
+      </header>
+
+      <!-- Dashboard Tab -->
+      <div id="dashboardTab" class="tab-content active">
+        <div class="dashboard-grid">
+          <div class="grid-item gauge-card glass">
+            <div class="gauge-container-vertical">
+              <div class="gauge-canvas-wrapper">
+                <canvas id="trustGauge" width="300" height="140"></canvas>
+              </div>
+
+              <div class="site-info">
+                <span class="current-site-label">CURRENT SITE:</span>
+                <span id="currentDomain" class="current-site-value">example.com</span>
+                <span class="site-safety-rating-label">SITE SAFETY RATING</span>
+              </div>
+              
+              <div class="trust-score-group">
+                <span class="trust-score-label">YOUR TRUST SCORE</span>
+                <div class="trust-score-value">
+                  <span id="trustScore">74</span><span class="score-percent">%</span>
+                  <span id="trustStatus" class="status-fair">(FAIR)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-item trackers-overview glass">
+            <h3>TRACKERS DETECTED & BLOCKED</h3>
+            <span class="total-blocked-label">TOTAL BLOCKED (TODAY)</span>
+            <div class="trackers-content">
+              <div class="donut-chart-container">
+                <canvas id="trackerDonut" width="140" height="140"></canvas>
+                <div class="donut-center">
+                  <span id="totalBlockedCount">148</span>
+                </div>
+              </div>
+              <div class="tracker-legend">
+                <div class="legend-item"><span class="dot dot-adv"></span> Advertising <span class="count" id="count-adv">0</span></div>
+                <div class="legend-item"><span class="dot dot-ana"></span> Analytics <span class="count" id="count-ana">0</span></div>
+                <div class="legend-item"><span class="dot dot-soc"></span> Social <span class="count" id="count-soc">0</span></div>
+                <div class="legend-item"><span class="dot dot-cook"></span> Cookies <span class="count" id="count-cook">0</span></div>
+                <div class="legend-item"><span class="dot dot-fin"></span> Fingerprinting <span class="count" id="count-fin">0</span></div>
+                <div class="legend-item"><span class="dot dot-oth"></span> Others <span class="count" id="count-oth">0</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bottom-grid">
+            <div class="grid-item protection-overview glass">
+              <h3>PROTECTION OVERVIEW</h3>
+              <div class="toggle-list">
+                <div class="toggle-item">
+                  <div class="toggle-info"><svg viewBox="0 0 24 24" width="14" height="14" stroke="#00d4ff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg> Ad Blocking</div>
+                  <label class="switch"><input type="checkbox" id="toggleAdBlocking" checked><span class="slider round"></span></label>
+                </div>
+                <div class="toggle-item">
+                  <div class="toggle-info"><svg viewBox="0 0 24 24" width="14" height="14" stroke="#00d4ff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg> Social Trackers</div>
+                  <label class="switch"><input type="checkbox" id="toggleSocialTrackers" checked><span class="slider round"></span></label>
+                </div>
+                <div class="toggle-item">
+                  <div class="toggle-info"><svg viewBox="0 0 24 24" width="14" height="14" stroke="#00d4ff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg> Fingerprinting</div>
+                  <label class="switch"><input type="checkbox" id="toggleFingerprinting" checked><span class="slider round"></span></label>
+                </div>
+              </div>
+              <div class="protection-guideline">
+                <svg viewBox="0 0 24 24" width="10" height="10" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" class="info-icon"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                <span>Note: Disabling a toggle stops blocking, but detection and counting will continue for your awareness.</span>
+              </div>
+            </div>
+
+            <div class="grid-item threat-history glass">
+              <h3>THREAT HISTORY</h3>
+              <div class="history-chart">
+                <svg viewBox="0 0 300 100" class="mini-line-graph">
+                  <path d="M0 80 Q 50 80, 75 70 T 150 40 T 225 60 T 300 30" fill="none" stroke="url(#graphGradient)" stroke-width="2" />
+                  <defs>
+                    <linearGradient id="graphGradient" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0%" stop-color="#4F46E5" />
+                      <stop offset="50%" stop-color="#06B6D4" />
+                      <stop offset="100%" stop-color="#059669" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div class="graph-labels">
+                  <span>Day</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Day</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-item recent-activity glass">
+              <h3>RECENT ACTIVITY</h3>
+              <ul class="activity-list" id="activityList"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Activity Tab -->
+      <div id="activityTab" class="tab-content">
+        <div class="grid-item full-width glass">
+          <div class="sites-header">
+            <h3>BLOCKED TRACKERS & SCRIPTS</h3>
+            <div class="search-container">
+              <input type="text" id="trackerSearch" placeholder="Filter domains..." class="glass-input">
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="search-icon"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </div>
+          </div>
+          <div class="inspector-table-wrapper">
+            <table class="inspector-table">
+              <thead>
+                <tr>
+                  <th id="manualColHeader" style="display: none; width: 40px;">BLOCK</th>
+                  <th>SOURCE DOMAIN</th>
+                  <th>TYPE</th>
+                  <th>CATEGORY</th>
+                  <th>STATUS</th>
+                  <th>TIMESTAMP</th>
+                </tr>
+              </thead>
+              <tbody id="inspectorBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sites (Whitelist) Tab -->
+      <div id="sitesTab" class="tab-content">
+        <div class="grid-item full-width glass">
+          <div class="whitelist-container">
+            <div class="whitelist-header">
+              <div class="whitelist-title-group">
+                <h3>TRUSTED WEBSITES</h3>
+                <p class="subtitle">Sites in this list will bypass all blocking rules</p>
+              </div>
+              <button id="trustCurrentSiteBtn" class="neon-button">
+                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                TRUST CURRENT WEBSITE
+              </button>
+            </div>
+            
+            <div class="whitelist-list-wrapper">
+              <ul id="whitelistList" class="whitelist-list">
+                <!-- Whitelisted sites will be injected here -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Insights Tab -->
+      <div id="insightsTab" class="tab-content">
+        <div class="grid-item full-width glass">
+          <div class="insights-container">
+            <div class="insights-header">
+              <h3>REAL-TIME PRIVACY INSIGHTS</h3>
+              <p class="subtitle">Understanding why we protect your data on this site</p>
+            </div>
+            <div id="insightsContent" class="insights-content">
+              <!-- Insight cards will be dynamically injected here -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Tab -->
+      <div id="settingsTab" class="tab-content">
+        <div class="grid-item full-width glass">
+          <div class="settings-grid">
+            <div class="settings-section">
+              <h4>PRIVACY MODES</h4>
+              <div class="mode-cards-container">
+                <!-- Aggressive Card -->
+                <div class="mode-card aggressive tooltip-trigger" data-mode="aggressive">
+                  <div class="mode-card-header">
+                    <span class="mode-title">Aggressive Protection</span>
+                    <span class="neon-indicator"></span>
+                  </div>
+                  <p class="mode-description">Stops all trackers and ads for maximum speed and privacy.</p>
+                  <span class="tooltip">Blocks 100% of EasyList/EasyPrivacy rules.</span>
+                </div>
+
+                <!-- Balanced Card -->
+                <div class="mode-card balanced tooltip-trigger" data-mode="balanced">
+                  <div class="mode-card-header">
+                    <span class="mode-title">Balanced Protection</span>
+                    <span class="neon-indicator"></span>
+                  </div>
+                  <p class="mode-description">Blocks harmful trackers while ensuring websites load perfectly.</p>
+                  <span class="tooltip">Blocks major tracking scripts while preserving site layout.</span>
+                </div>
+
+                <!-- Manual Card -->
+                <div class="mode-card manual tooltip-trigger" data-mode="manual">
+                  <div class="mode-card-header">
+                    <span class="mode-title">Manual Control</span>
+                    <span class="neon-indicator"></span>
+                  </div>
+                  <p class="mode-description">Detection only. You decide which trackers to block in the Sites tab.</p>
+                  <span class="tooltip">No automatic blocking. Manual unblock/block enabled.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="settings-section">
+              <h4>ADVANCED PROTECTION</h4>
+              <div class="toggle-list">
+                <div class="toggle-item">
+                  <span>Block Third-Party Cookies</span>
+                  <label class="switch"><input type="checkbox" id="blockCookies"><span class="slider round"></span></label>
+                </div>
+                <div class="toggle-item">
+                  <span>Show Desktop Notifications</span>
+                  <label class="switch"><input type="checkbox" id="showNotifications"><span class="slider round"></span></label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <div id="balancedModePopup" class="mode-info-popup hidden">
+    <div class="popup-content glass">
+      <div class="popup-header">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="#00ff88" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+        <span>Balanced Mode Explained</span>
+        <button id="closePopup" class="close-btn">&times;</button>
+      </div>
+      <div class="popup-body">
+        <div class="info-side blocked">
+          <h5>BLOCKED</h5>
+          <ul>
+            <li>Cross-site trackers</li>
+            <li>Malicious scripts</li>
+            <li>Fingerprinting</li>
+          </ul>
+        </div>
+        <div class="info-divider"></div>
+        <div class="info-side allowed">
+          <h5>ALLOWED</h5>
+          <ul>
+            <li>Login sessions</li>
+            <li>Essential site scripts</li>
+            <li>First-party cookies</li>
+          </ul>
+        </div>
+      </div>
+      <div class="popup-footer">
+        <p>Ensures 100% site functionality while keeping you safe.</p>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
